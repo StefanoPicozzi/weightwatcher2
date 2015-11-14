@@ -23,6 +23,10 @@ RUN rm -r /opt/jboss/wildfly/standalone/deployments/kie-server.war
 COPY wildfly /opt/jboss/wildfly
 COPY m2 /opt/jboss/.m2
 
+# Fix permissions on m2 files
+RUN chown -R jboss:jboss /opt/jboss/.m2
+RUN chmod -R 755 /opt/jboss/.m2
+
 # Fix permissions on support files
 RUN chown -R jboss:jboss $DROOLS_HOME
 RUN chmod -R 755 /opt/jboss/wildfly/standalone/deployments
