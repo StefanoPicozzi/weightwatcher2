@@ -35,9 +35,10 @@ RUN chmod -R 755 /opt/jboss/wildfly/standalone/deployments
 USER jboss
 
 # Expose Ports
-EXPOSE 9990 9999 9090 8080
+# EXPOSE 9990 9999 9090 8080
+EXPOSE 8080
 
 ENV M2_HOME /opt/jboss/.m2
 
 # Run DROOLS
-CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-c", "standalone-full-kie-server.xml", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0", "-Dorg.jbpm.server.ext.disabled=true"]
+CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-c", "standalone-full-kie-server.xml", "-b", "0.0.0.0", "-Dorg.jbpm.server.ext.disabled=true"]
