@@ -1,7 +1,7 @@
 
 # Test client for the weightwatcher server based application.
 # Installation for weightwatcher are located at:
-# http://blog.emergile.com/2015/05/09/weightwatcher/ 
+# http://blog.emergile.com/2015/05/09/weightwatcher/
 #
 # Author: Stefano Picozzi
 # Date: November, 2015
@@ -13,7 +13,7 @@ library('rjson')
 library('RCurl')
 library('XML')
 
-url <- "http://192.168.59.103:8080"
+url <- "http://weightwatcher2.cloudapps.example.com"
 
 url <- paste(url, "/kie-server/services/rest/server/containers/instances/watch", sep = "")
 print(url)
@@ -120,8 +120,5 @@ write( response, "output.xml" )
 list <- xmlToList(xmlTreeParse(response))
 for ( i in 2:(length(list$result)-2) ) {
   msg <- as.character( list$result[[i]]$com.redhat.weightwatcher.Fact$facttxt )
-  print( msg )  
+  print( msg )
 }
-
-
-
