@@ -7,8 +7,8 @@ items:
       openshift.io/generated-by: OpenShiftNewApp
     creationTimestamp: null
     labels:
-      app: workbench2
-    name: workbench2
+      app: workbench
+    name: workbench
   spec:
     dockerImageRepository: spicozzi/workbench2
   status:
@@ -20,13 +20,13 @@ items:
       openshift.io/generated-by: OpenShiftNewApp
     creationTimestamp: null
     labels:
-      app: workbench2
-    name: workbench2
+      app: workbench
+    name: workbench
   spec:
     replicas: 1
     selector:
-      app: workbench2
-      deploymentconfig: workbench2
+      app: workbench
+      deploymentconfig: workbench
     strategy:
       resources: {}
     template:
@@ -35,12 +35,12 @@ items:
           openshift.io/generated-by: OpenShiftNewApp
         creationTimestamp: null
         labels:
-          app: workbench2
-          deploymentconfig: workbench2
+          app: workbench
+          deploymentconfig: workbench
       spec:
         containers:
         - image: spicozzi/workbench2
-          name: workbench2
+          name: workbench
           ports:
           - containerPort: 8080
             protocol: TCP
@@ -52,10 +52,10 @@ items:
     - imageChangeParams:
         automatic: true
         containerNames:
-        - workbench2
+        - workbench
         from:
           kind: ImageStreamTag
-          name: workbench2:latest
+          name: workbench:latest
       type: ImageChange
   status: {}
 - apiVersion: v1
@@ -65,8 +65,8 @@ items:
       openshift.io/generated-by: OpenShiftNewApp
     creationTimestamp: null
     labels:
-      app: workbench2
-    name: workbench2
+      app: workbench
+    name: workbench
   spec:
     ports:
     - name: 8080-tcp
@@ -78,8 +78,8 @@ items:
       protocol: TCP
       targetPort: 9990
     selector:
-      app: workbench2
-      deploymentconfig: workbench2
+      app: workbench
+      deploymentconfig: workbench
   status:
     loadBalancer: {}
 kind: List
