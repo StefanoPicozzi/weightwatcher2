@@ -30,3 +30,4 @@ spec:
     - name: localvol
       hostPath: 
         path: /home/data/mysql
+
