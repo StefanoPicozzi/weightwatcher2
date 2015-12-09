@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.guvnor</groupId>
+  <artifactId>guvnor-asset-mgmt-project</artifactId>
+  <versioning>
+    <release>6.3.0.Final</release>
+    <versions>
+      <version>6.2.0.Final-redhat-4</version>
+      <version>6.3.0.Final</version>
+    </versions>
+    <lastUpdated>20151031051438</lastUpdated>
+  </versioning>
+</metadata>
