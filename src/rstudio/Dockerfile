@@ -80,13 +80,13 @@ RUN cd packages; wget http://cran.rstudio.com/src/contrib/xlsxjars_0.6.1.tar.gz
 RUN cd packages; R CMD INSTALL xlsxjars_0.6.1.tar.gz
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/rjson_0.2.15.tar.gz
 RUN cd packages; R CMD INSTALL rjson_0.2.15.tar.gz
-RUN cd packages; wget http://cran.rstudio.com/src/contrib/rgl_0.95.1367.tar.gz
-RUN cd packages; R CMD INSTALL rgl_0.95.1367.tar.gz
+RUN cd packages; wget http://cran.rstudio.com/src/contrib/rgl_0.95.1429.tar.gz
+RUN cd packages; R CMD INSTALL rgl_0.95.1429.tar.gz
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/xlsx_0.5.7.tar.gz
 RUN cd packages; R CMD INSTALL xlsx_0.5.7.tar.gz
 
-RUN cd packages; wget http://cran.rstudio.com/src/contrib/jsonlite_0.9.17.tar.gz
-RUN cd packages; R CMD INSTALL jsonlite_0.9.17.tar.gz
+RUN cd packages; wget http://cran.rstudio.com/src/contrib/jsonlite_0.9.19.tar.gz
+RUN cd packages; R CMD INSTALL jsonlite_0.9.19.tar.gz
 
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/mime_0.4.tar.gz
 RUN cd packages; R CMD INSTALL mime_0.4.tar.gz
