@@ -73,6 +73,10 @@ items:
       port: 8080
       protocol: TCP
       targetPort: 8080
+    - name: 9990-tcp
+      port: 9990
+      protocol: TCP
+      targetPort: 9990
     selector:
       app: workbench
       deploymentconfig: workbench
