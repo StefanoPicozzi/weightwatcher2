@@ -1,0 +1,98 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      name: xxx
+    name: xxx
+  spec:
+    dockerImageRepository: spicozzi/weightwatcher
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: DeploymentConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      name: xxx
+    name: xxx
+  spec:
+    replicas: 1
+    selector:
+      deploymentconfig: xxx
+      name: xxx
+    strategy:
+      resources: {}
+    template:
+      metadata:
+        annotations:
+          openshift.io/generated-by: OpenShiftNewApp
+        creationTimestamp: null
+        labels:
+          deploymentconfig: xxx
+          name: xxx
+      spec:
+        containers:
+        - image: spicozzi/weightwatcher
+          name: xxx
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          - containerPort: 9090
+            protocol: TCP
+          - containerPort: 9990
+            protocol: TCP
+          - containerPort: 9999
+            protocol: TCP
+          resources: {}
+    triggers:
+    - type: ConfigChange
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+        - xxx
+        from:
+          kind: ImageStreamTag
+          name: xxx:latest
+      type: ImageChange
+  status: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      name: xxx
+    name: xxx
+  spec:
+    ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    - name: 9090-tcp
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    - name: 9990-tcp
+      port: 9990
+      protocol: TCP
+      targetPort: 9990
+    - name: 9999-tcp
+      port: 9999
+      protocol: TCP
+      targetPort: 9999
+    selector:
+      deploymentconfig: xxx
+      name: xxx
+  status:
+    loadBalancer: {}
+kind: List
+metadata: {}

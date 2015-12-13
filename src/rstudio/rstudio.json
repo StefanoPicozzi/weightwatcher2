@@ -1,0 +1,128 @@
+{
+    "kind": "List",
+    "apiVersion": "v1",
+    "metadata": {},
+    "items": [
+        {
+            "kind": "ImageStream",
+            "apiVersion": "v1",
+            "metadata": {
+                "name": "rstudio",
+                "creationTimestamp": null,
+                "labels": {
+                    "name": "rstudio"
+                },
+                "annotations": {
+                    "openshift.io/generated-by": "OpenShiftNewApp"
+                }
+            },
+            "spec": {
+                "dockerImageRepository": "spicozzi/rstudio"
+            },
+            "status": {
+                "dockerImageRepository": ""
+            }
+        },
+        {
+            "kind": "DeploymentConfig",
+            "apiVersion": "v1",
+            "metadata": {
+                "name": "rstudio",
+                "creationTimestamp": null,
+                "labels": {
+                    "name": "rstudio"
+                },
+                "annotations": {
+                    "openshift.io/generated-by": "OpenShiftNewApp"
+                }
+            },
+            "spec": {
+                "strategy": {
+                    "resources": {}
+                },
+                "triggers": [
+                    {
+                        "type": "ConfigChange"
+                    },
+                    {
+                        "type": "ImageChange",
+                        "imageChangeParams": {
+                            "automatic": true,
+                            "containerNames": [
+                                "rstudio"
+                            ],
+                            "from": {
+                                "kind": "ImageStreamTag",
+                                "name": "rstudio:latest"
+                            }
+                        }
+                    }
+                ],
+                "replicas": 1,
+                "selector": {
+                    "deploymentconfig": "rstudio",
+                    "name": "rstudio"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "deploymentconfig": "rstudio",
+                            "name": "rstudio"
+                        },
+                        "annotations": {
+                            "openshift.io/generated-by": "OpenShiftNewApp"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "rstudio",
+                                "image": "spicozzi/rstudio",
+                                "ports": [
+                                    {
+                                        "containerPort": 8787,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {}
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {}
+        },
+        {
+            "kind": "Service",
+            "apiVersion": "v1",
+            "metadata": {
+                "name": "rstudio",
+                "creationTimestamp": null,
+                "labels": {
+                    "name": "rstudio"
+                },
+                "annotations": {
+                    "openshift.io/generated-by": "OpenShiftNewApp"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "8787-tcp",
+                        "protocol": "TCP",
+                        "port": 8787,
+                        "targetPort": 8787
+                    }
+                ],
+                "selector": {
+                    "deploymentconfig": "rstudio",
+                    "name": "rstudio"
+                }
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}

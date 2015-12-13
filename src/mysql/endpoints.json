@@ -1,0 +1,17 @@
+{
+  "kind": "Endpoints",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "external-mysql"
+  },
+  "subsets": [
+    {
+      "addresses":  [
+        { "IP": "192.168.99.100" }
+      ],
+      "ports":  [
+        { "port": 3306, "name": "external-mysql" }
+      ]
+    }
+  ]
+}
