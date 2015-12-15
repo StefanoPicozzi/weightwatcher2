@@ -1,8 +1,11 @@
-docker run -it \
-  -p 3306:3306 \
-  -v /home/stefanopicozzi/data/mysql:/var/lib/mysql \
-  --env MYSQL_ROOT_PASSWORD=password \
-  --env MYSQL_USER=sa \
-  --env MYSQL_PASSWORD=password \
-  --env MYSQL_DATABASE=nudgedb \
-  mysql:latest;
+docker rm -f mysql
+docker run -t -i -p 3306:3306 \
+  -e MYSQL_USER_NAME=sa \
+  -e MYSQL_USER_PASS=password \
+  -e MYSQL_USER_DB=nudgedb \
+  -v /Users/stefanopicozzi/data/mysql:/var/lib/mysql \
+  --name mysql \
+  dgraziotin/mysql
+
+
+#  -v ${PWD}/mysql:/var/lib/mysql \
