@@ -3,10 +3,11 @@
   <groupId>org.guvnor</groupId>
   <artifactId>guvnor-asset-mgmt-project</artifactId>
   <versioning>
-    <release>6.2.0.Final-redhat-4</release>
+    <release>6.3.0.Final</release>
     <versions>
       <version>6.2.0.Final-redhat-4</version>
+      <version>6.3.0.Final</version>
     </versions>
-    <lastUpdated>20150726105139</lastUpdated>
+    <lastUpdated>20151031051438</lastUpdated>
   </versioning>
 </metadata>

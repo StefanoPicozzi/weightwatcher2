@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Build-Timestamp: Fri, 25 Sep 2015 13:17:45 +0200
+Implementation-Title: KIE :: Execution Server :: Wars :: Distribution 
+ Wars
+Implementation-Version: 6.3.0.Final
+Os-Version: 2.6.32-504.8.1.el6.x86_64
+Built-By: kiereleaseuser
+Specification-Vendor: JBoss by Red Hat
+Created-By: Apache Maven 3.2.3
+Os-Name: Linux
+Implementation-URL: http://www.jboss.org/drools/kie-parent-with-depend
+ encies/droolsjbpm-integration/kie-server-parent/kie-server-wars/kie-s
+ erver
+Java-Vendor: Oracle Corporation
+Implementation-Vendor: JBoss by Red Hat
+Scm-Revision: 38c23d5b3b9521bf270baabde26addc2621dafb8
+Implementation-Vendor-Id: org.kie.server
+Scm-Url: https://github.com/droolsjbpm/droolsjbpm-integration/kie-serv
+ er-parent/kie-server-wars/kie-server
+Build-Jdk: 1.7.0_25
+Java-Version: 1.7.0_25
+Ignore-Scanning-Archives: cxf-api-2.7.16.jar,cxf-rt-bindings-soap-2.7.
+ 16.jar,cxf-rt-bindings-xml-2.7.16.jar,cxf-rt-core-2.7.16.jar,cxf-rt-d
+ atabinding-jaxb-2.7.16.jar,cxf-rt-frontend-jaxws-2.7.16.jar,cxf-rt-fr
+ ontend-simple-2.7.16.jar,cxf-rt-transports-http-2.7.16.jar,cxf-rt-ws-
+ addr-2.7.16.jar,cxf-rt-ws-policy-2.7.16.jar
+Scm-Connection: scm:git:git@github.com:droolsjbpm/droolsjbpm-integrati
+ on.git/kie-server-parent/kie-server-wars/kie-server
+Os-Arch: amd64
+Specification-Title: KIE :: Execution Server :: Wars :: Distribution W
+ ars
+Specification-Version: 6.3.0.Final
+Archiver-Version: Plexus Archiver
+

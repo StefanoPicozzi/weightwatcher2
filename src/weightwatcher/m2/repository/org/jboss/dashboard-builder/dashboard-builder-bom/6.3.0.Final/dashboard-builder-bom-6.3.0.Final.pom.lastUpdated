@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Dec 22 08:40:06 UTC 2015
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1450773606608
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.jboss.dashboard-builder\:dashboard-builder-bom\:pom\:6.3.0.Final from/to central (http\://repo.maven.apache.org/maven2)\: repo.maven.apache.org\: Name or service not known
