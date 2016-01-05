@@ -1,0 +1,10 @@
+strict-order
+port=5053
+local=/example.com/
+bind-interfaces
+address=/.cloudapps.example.com/192.168.33.10
+resolv-file=/etc/resolv.dnsmasq.conf
+addn-hosts=/dnsmasq.hosts
+expand-hosts
+domain-needed
+log-queries
