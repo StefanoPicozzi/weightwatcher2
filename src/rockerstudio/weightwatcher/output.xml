@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<org.kie.server.api.model.ServiceResponse>
+  <type>SUCCESS</type>
+  <msg>Container watch successfully called.</msg>
+  <result class="string"><execution-results>
+  <result identifier="Watch">
+    <query-results>
+      <identifiers>
+        <identifier>fact</identifier>
+      </identifiers>
+      <row>
+        <com.redhat.weightwatcher.Fact>
+          <factid>999</factid>
+          <facttype>0</facttype>
+          <facttxt>Weightwatcher says that bfskinner@behaviorist.org WEIGHT change was 9.52% over the past 30 days</facttxt>
+          <factname>Watch</factname>
+          <factjson>{"facttxt":"ruleChangeWeight","userid":1,"obsvalue":9.523809523809524}</factjson>
+        </com.redhat.weightwatcher.Fact>
+        <fact-handle external-form="0:20:1655473220:1655473220:20:DEFAULT:NON_TRAIT:com.redhat.weightwatcher.Fact"/>
+      </row>
+      <row>
+        <com.redhat.weightwatcher.Fact>
+          <factid>999</factid>
+          <facttype>0</facttype>
+          <facttxt>Weightwatcher says that bfskinner@behaviorist.org WEIGHT minimum was 76.00 over the past 30 days</facttxt>
+          <factname>Watch</factname>
+          <factjson>{"facttxt":"ruleLowWeight","userid":1,"obsvalue":76}</factjson>
+        </com.redhat.weightwatcher.Fact>
+        <fact-handle external-form="0:19:964019284:964019284:19:DEFAULT:NON_TRAIT:com.redhat.weightwatcher.Fact"/>
+      </row>
+      <row>
+        <com.redhat.weightwatcher.Fact>
+          <factid>999</factid>
+          <facttype>0</facttype>
+          <facttxt>Weightwatcher says that bfskinner@behaviorist.org WEIGHT maximum was 80.00 over the past 30 days</facttxt>
+          <factname>Watch</factname>
+          <factjson>{"facttxt":"ruleHighWeight","userid":1,"obsvalue":80}</factjson>
+        </com.redhat.weightwatcher.Fact>
+        <fact-handle external-form="0:18:604168900:604168900:18:DEFAULT:NON_TRAIT:com.redhat.weightwatcher.Fact"/>
+      </row>
+      <row>
+        <com.redhat.weightwatcher.Fact>
+          <factid>999</factid>
+          <facttype>0</facttype>
+          <facttxt>Weightwatcher says that bfskinner@behaviorist.org WEIGHT averaged 78.25 over the past 7 days</facttxt>
+          <factname>Watch</factname>
+          <factjson>{"facttxt":"ruleAverageWeight","userid":1,"obsvalue":78.25}</factjson>
+        </com.redhat.weightwatcher.Fact>
+        <fact-handle external-form="0:17:742525831:742525831:17:DEFAULT:NON_TRAIT:com.redhat.weightwatcher.Fact"/>
+      </row>
+    </query-results>
+  </result>
+</execution-results></result>
+</org.kie.server.api.model.ServiceResponse>
+
