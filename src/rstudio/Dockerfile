@@ -45,8 +45,8 @@ RUN cd packages; wget http://cran.rstudio.com/src/contrib/RColorBrewer_1.1-2.tar
 RUN cd packages; R CMD INSTALL RColorBrewer_1.1-2.tar.gz
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/dichromat_2.0-0.tar.gz
 RUN cd packages; R CMD INSTALL dichromat_2.0-0.tar.gz
-RUN cd packages; wget http://cran.rstudio.com/src/contrib/munsell_0.4.2.tar.gz
-RUN cd packages; R CMD INSTALL munsell_0.4.2.tar.gz
+RUN cd packages; wget http://cran.rstudio.com/src/contrib/munsell_0.4.3.tar.gz
+RUN cd packages; R CMD INSTALL munsell_0.4.3.tar.gz
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/labeling_0.3.tar.gz
 RUN cd packages; R CMD INSTALL labeling_0.3.tar.gz
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/plyr_1.8.3.tar.gz
@@ -69,8 +69,8 @@ RUN cd packages; wget http://cran.rstudio.com/src/contrib/xlsxjars_0.6.1.tar.gz
 RUN cd packages; R CMD INSTALL xlsxjars_0.6.1.tar.gz
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/rjson_0.2.15.tar.gz
 RUN cd packages; R CMD INSTALL rjson_0.2.15.tar.gz
-RUN cd packages; wget http://cran.rstudio.com/src/contrib/rgl_0.95.1429.tar.gz
-RUN cd packages; R CMD INSTALL rgl_0.95.1429.tar.gz
+RUN cd packages; wget http://cran.rstudio.com/src/contrib/rgl_0.95.1441.tar.gz
+RUN cd packages; R CMD INSTALL rgl_0.95.1441.tar.gz
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/xlsx_0.5.7.tar.gz
 RUN cd packages; R CMD INSTALL xlsx_0.5.7.tar.gz
 
@@ -80,11 +80,11 @@ RUN cd packages; R CMD INSTALL jsonlite_0.9.19.tar.gz
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/mime_0.4.tar.gz
 RUN cd packages; R CMD INSTALL mime_0.4.tar.gz
 
-RUN cd packages; wget http://cran.rstudio.com/src/contrib/curl_0.9.5.tar.gz
-RUN cd packages; R CMD INSTALL curl_0.9.5.tar.gz
+RUN cd packages; wget http://cran.rstudio.com/src/contrib/curl_0.9.6.tar.gz
+RUN cd packages; R CMD INSTALL curl_0.9.6.tar.gz
 
-RUN cd packages; wget http://cran.rstudio.com/src/contrib/R6_2.1.1.tar.gz
-RUN cd packages; R CMD INSTALL R6_2.1.1.tar.gz
+RUN cd packages; wget http://cran.rstudio.com/src/contrib/R6_2.1.2.tar.gz
+RUN cd packages; R CMD INSTALL R6_2.1.2.tar.gz
 
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/bitops_1.0-6.tar.gz
 RUN cd packages; R CMD INSTALL bitops_1.0-6.tar.gz
@@ -105,6 +105,12 @@ RUN cd packages; R CMD INSTALL openssl_0.9.1.tar.gz
 
 RUN cd packages; wget http://cran.rstudio.com/src/contrib/httr_1.1.0.tar.gz
 RUN cd packages; R CMD INSTALL httr_1.1.0.tar.gz
+
+RUN cd packages; wget http://cran.rstudio.com/src/contrib/BH_1.60.0-1.tar.gz
+RUN cd packages; R CMD INSTALL BH_1.60.0-1.tar.gz
+
+RUN cd packages; wget http://cran.rstudio.com/src/contrib/xml2_0.1.2.tar.gz
+RUN cd packages; R CMD INSTALL xml2_0.1.2.tar.gz
 
 USER root
 RUN useradd guest
