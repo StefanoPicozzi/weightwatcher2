@@ -111,7 +111,8 @@ response <- tryCatch({
 })
 
 # Tidy up response payload
-response <- saveXML( content(response, type="application/xml") )
+# response <- saveXML( content(response, type="application/xml") )
+response <- content(response, type="application/xml")
 response <- gsub("&lt;", "<", response, fixed=TRUE)
 response <- gsub("&gt;", ">", response, fixed=TRUE)
 response <- gsub("&amp;quot;", '"', response, fixed=TRUE)
