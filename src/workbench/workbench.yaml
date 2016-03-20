@@ -10,7 +10,7 @@ items:
       app: workbench
     name: workbench
   spec:
-    dockerImageRepository: spicozzi/workbench2
+    dockerImageRepository: spicozzi/workbench
   status:
     dockerImageRepository: ""
 - apiVersion: v1
@@ -39,7 +39,7 @@ items:
           deploymentconfig: workbench
       spec:
         containers:
-        - image: spicozzi/workbench2
+        - image: spicozzi/workbench
           name: workbench
           ports:
           - containerPort: 8080

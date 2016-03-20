@@ -11,7 +11,7 @@ Sys.setenv(NOAWT = "true")
 library('httr')
 library('rjson')
 library('RCurl')
-library('XML')
+#library('XML')
 
 url <- "http://weightwatcher.cloudapps.example.com"
 
@@ -111,8 +111,7 @@ response <- tryCatch({
 })
 
 # Tidy up response payload
-# response <- saveXML( content(response, type="application/xml") )
-response <- content(response, type="application/xml")
+response <- saveXML( content(response, type="application/xml") )
 response <- gsub("&lt;", "<", response, fixed=TRUE)
 response <- gsub("&gt;", ">", response, fixed=TRUE)
 response <- gsub("&amp;quot;", '"', response, fixed=TRUE)
